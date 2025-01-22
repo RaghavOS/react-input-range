@@ -462,7 +462,7 @@ export default class InputRange extends React.Component {
       value: { max, min },
     } = this.props;
 
-    event.preventDefault();
+    if (event.cancelable) event.preventDefault();
 
     const value = valueTransformer.getValueFromPosition(position, minValue, maxValue, this.getTrackClientRect());
     const stepValue = valueTransformer.getStepValueFromValue(value, this.props.step);
