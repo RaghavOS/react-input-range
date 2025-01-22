@@ -137,7 +137,7 @@ export default class InputRange extends React.Component {
    * @return {ClientRect}
    */
   getTrackClientRect() {
-    return this.trackNode.getClientRect();
+    return this.trackNode?.getClientRect();
   }
 
   /**
