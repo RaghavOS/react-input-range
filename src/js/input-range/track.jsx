@@ -161,7 +161,7 @@ export default class Track extends React.Component {
    */
   @autobind
   handleTouchStart(event) {
-    event.preventDefault();
+    if (event.cancelable) event.preventDefault();
 
     this.handleMouseDown(event);
   }
